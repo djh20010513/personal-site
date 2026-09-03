@@ -10,7 +10,7 @@ export default function Home() {
       <FloatingDecorations />
 
       {/* ============ Hero - 5 秒传达三件事 ============ */}
-      <section className="min-h-screen flex items-center px-6 pt-28 pb-20 relative">
+      <section className="px-6 pt-12 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
 
           {/* 顶部小标签 - 身份 */}
