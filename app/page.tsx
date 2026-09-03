@@ -10,11 +10,11 @@ export default function Home() {
       <FloatingDecorations />
 
       {/* ============ Hero - 5 秒传达三件事 ============ */}
-      <section className="min-h-screen flex items-center px-6 pt-32 pb-20 relative">
+      <section className="min-h-screen flex items-center px-6 pt-28 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
 
           {/* 顶部小标签 - 身份 */}
-          <div className="inline-flex items-center gap-2 mb-8 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
             <span className="font-mono text-xs tracking-wider text-ink-700">
               2026 校招 · 寻找 AI 产品经理机会
@@ -22,28 +22,28 @@ export default function Home() {
           </div>
 
           {/* 姓名 + 职位 */}
-          <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-4">
+          <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-3">
             <span className="text-ink-900">{profile.name}</span>
           </h1>
 
-          <div className="mb-10">
+          <div className="mb-7">
             <span className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight">
               {profile.title} · Agent / AIGC
             </span>
           </div>
 
           {/* 主标题 - 1 句话讲清做什么 */}
-          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tightish leading-[1.2] text-ink-900 mb-6 max-w-4xl">
-            把模型能力,变成真正<em className="not-italic text-gradient-rainbow">可用、可衡量</em>的 AI 产品。
+          <h2 className="font-serif text-xl md:text-2xl font-bold tracking-tightish leading-[1.4] text-ink-900 mb-4 max-w-4xl">
+            把模型能力，变成真正 <em className="not-italic text-gradient-rainbow">可用、可衡量</em> 的 AI 产品
           </h2>
 
           {/* 副标题 */}
-          <p className="text-base md:text-lg text-ink-700 leading-relaxed max-w-3xl mb-12">
-            聚焦 Agent 与 AIGC,围绕<em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em>场景,持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路。
+          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-10">
+            聚焦 Agent 与 AIGC，围绕 <em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em> 场景，持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路
           </p>
 
           {/* 三大数据 - 拿过什么结果 */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12 max-w-3xl">
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-10 max-w-3xl">
             <div className="card p-6 text-center">
               <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
                 +12%
@@ -51,16 +51,7 @@ export default function Home() {
               <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
                 GMV
               </div>
-              <div className="text-xs text-ink-300 mt-1">抖音生活服务 · AI 创意视频</div>
-            </div>
-            <div className="card p-6 text-center">
-              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
-                +24%
-              </div>
-              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
-                AI Cover CTR
-              </div>
-              <div className="text-xs text-ink-300 mt-1">B站三连 · 多模态 AIGC</div>
+              <div className="text-xs text-ink-300 mt-1">字节 · 抖音生活服务</div>
             </div>
             <div className="card p-6 text-center">
               <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
@@ -70,6 +61,15 @@ export default function Home() {
                 Match Effect
               </div>
               <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
+            </div>
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +24%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                AI Cover CTR
+              </div>
+              <div className="text-xs text-ink-300 mt-1">B站 · 多模态 AIGC</div>
             </div>
           </div>
 
