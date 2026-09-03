@@ -9,91 +9,82 @@ export default function Home() {
     <div className="relative overflow-x-hidden">
       <FloatingDecorations />
 
-      {/* ============ Hero ============ */}
+      {/* ============ Hero - 5 秒传达三件事 ============ */}
       <section className="min-h-screen flex items-center px-6 pt-32 pb-20 relative">
-        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative">
-          {/* 左侧文字 */}
-          <div>
-            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-sage animate-pulse" />
-              <span className="font-mono text-xs tracking-wider text-ink-700">
-                HELLO / 你好
-              </span>
-            </div>
+        <div className="max-w-6xl mx-auto w-full relative">
 
-            <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-6">
-              <span className="text-ink-900">Hi,</span>
-              <br />
-              <span className="text-ink-900">我是 {profile.name.charAt(0)}</span>
-              <span className="inline-block w-3 h-12 md:h-16 bg-ink-900 align-middle ml-1 animate-pulse" />
-            </h1>
-
-            <div className="mb-6">
-              <span className="text-2xl md:text-3xl font-bold text-gradient-rainbow">
-                {profile.title}
-              </span>
-            </div>
-
-            {/* MY FILE 标签条 */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur border border-white/80 rounded-full mb-6">
-              <span className="font-mono text-xs text-ink-500">MY FILE /</span>
-              <span className="text-sm text-ink-700">{profile.subtitle}</span>
-            </div>
-
-            {/* 简介文字 */}
-            <p className="text-ink-700 leading-relaxed mb-4 max-w-md">
-              {profile.intro[0]}
-            </p>
-            <p className="text-ink-500 leading-relaxed mb-8 max-w-md text-sm">
-              {profile.intro.slice(1).join(' ')}
-            </p>
-
-            {/* 技能标签 */}
-            <div className="flex flex-wrap gap-2 mb-8">
-              {profile.skillTags.map((s) => (
-                <span key={s.label} className={`chip ${s.color}`}>
-                  {s.label}
-                </span>
-              ))}
-            </div>
-
-            {/* CTA 按钮 */}
-            <div className="flex gap-3">
-              <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-primary">
-                <span>下载简历</span>
-                <span className="text-xs">↓</span>
-              </a>
-              <Link href="#contact" className="btn-ghost">
-                <span>联系我</span>
-              </Link>
-            </div>
+          {/* 顶部小标签 - 身份 */}
+          <div className="inline-flex items-center gap-2 mb-8 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
+            <span className="font-mono text-xs tracking-wider text-ink-700">
+              2026 校招 · 寻找 AI 产品经理机会
+            </span>
           </div>
 
-          {/* 右侧 Hero 装饰 - 用 NOW 卡片 */}
-          <div className="relative hidden md:block">
-            <div className="absolute top-10 right-0 w-64 h-64 rounded-full bg-gradient-to-br from-rainbow-purple/40 to-rainbow-pink/40 blur-3xl animate-float-slow" />
-            <div className="absolute top-40 right-32 w-32 h-32 rounded-full bg-gradient-to-br from-rainbow-blue/40 to-rainbow-mint/40 blur-2xl animate-float-fast" />
+          {/* 姓名 + 职位 */}
+          <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-4">
+            <span className="text-ink-900">{profile.name}</span>
+          </h1>
 
-            {/* 大圆头像区 */}
-            <div className="relative w-[420px] h-[420px] mx-auto rounded-full overflow-hidden border-8 border-white shadow-card-lg">
-              <div className="w-full h-full bg-gradient-to-br from-rainbow-pink via-rainbow-yellow to-rainbow-blue grid place-items-center">
-                <span className="font-serif text-9xl font-black text-white/80">
-                  {profile.name.charAt(0)}
-                </span>
+          <div className="mb-10">
+            <span className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight">
+              {profile.title} · Agent / AIGC
+            </span>
+          </div>
+
+          {/* 主标题 - 1 句话讲清做什么 */}
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-tightish leading-[1.2] text-ink-900 mb-6 max-w-4xl">
+            把模型能力,变成真正<em className="not-italic text-gradient-rainbow">可用、可衡量</em>的 AI 产品。
+          </h2>
+
+          {/* 副标题 */}
+          <p className="text-base md:text-lg text-ink-700 leading-relaxed max-w-3xl mb-12">
+            聚焦 Agent 与 AIGC,围绕<em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em>场景,持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路。
+          </p>
+
+          {/* 三大数据 - 拿过什么结果 */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-12 max-w-3xl">
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +12%
               </div>
-              {/* 漂浮气泡 */}
-              <div className="absolute top-12 -left-8 w-12 h-12 rounded-full bg-white/60 backdrop-blur border-2 border-white animate-float-slow" />
-              <div className="absolute top-32 -right-4 w-16 h-16 rounded-full bg-white/60 backdrop-blur border-2 border-white animate-float-fast" />
-              <div className="absolute bottom-16 left-4 w-10 h-10 rounded-full bg-white/60 backdrop-blur border-2 border-white animate-float-slow" />
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                GMV
+              </div>
+              <div className="text-xs text-ink-300 mt-1">抖音生活服务 · AI 创意视频</div>
             </div>
-
-            {/* NOW 标签 */}
-            <div className="absolute bottom-12 right-8 bg-white/80 backdrop-blur-xl border border-white rounded-2xl p-4 shadow-card max-w-[200px]">
-              <div className="font-mono text-xs text-ink-500 mb-1">NOW</div>
-              <div className="text-sm font-bold text-ink-900 mb-1">AI × 用户决策</div>
-              <div className="text-xs text-ink-500">正在做新的探索</div>
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +24%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                AI Cover CTR
+              </div>
+              <div className="text-xs text-ink-300 mt-1">B站三连 · 多模态 AIGC</div>
+            </div>
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +40%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                Match Effect
+              </div>
+              <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
             </div>
           </div>
+
+          {/* 两个 CTA */}
+          <div className="flex flex-wrap gap-4">
+            <Link href="#projects" className="btn-primary">
+              <span>View My Work</span>
+              <span className="text-xs">→</span>
+            </Link>
+            <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-ghost">
+              <span>Download Resume</span>
+              <span className="text-xs">↓</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
