@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-pink: #FFD4E0;
+  --bg-yellow: #FFF4C7;
+  --bg-blue: #C7E0FF;
+  --bg-mint: #C8F4E0;
+  --text: #1A1A2E;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 10%, rgba(255, 212, 224, 0.6), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(255, 244, 199, 0.5), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 90% 30%, rgba(199, 224, 255, 0.5), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 10% 60%, rgba(200, 244, 224, 0.4), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(224, 212, 255, 0.4), transparent 70%),
+    #FEFCF8;
+  background-attachment: fixed;
+}
+
+/* 背景装饰圆点 */
+.bg-decoration::before,
+.bg-decoration::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+::selection {
+  background-color: rgba(139, 127, 255, 0.3);
+  color: var(--text);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(26, 26, 46, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(26, 26, 46, 0.3); }
+
+/* 渐变文字 */
+.text-gradient-rainbow {
+  background: linear-gradient(135deg, #FF8FB1 0%, #FFB547 50%, #5B9DFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 标签样式 */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 26, 46, 0.08);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s;
+}
+.chip:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(26, 26, 46, 0.15);
+}
+
+/* 主按钮 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--text);
+  color: white;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 6px 16px -4px rgba(26, 26, 46, 0.25);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(26, 26, 46, 0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  border: 1px solid rgba(26, 26, 46, 0.12);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(26, 26, 46, 0.2);
+}
+
+/* 卡片通用样式 */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  box-shadow: 0 4px 24px -4px rgba(26, 26, 46, 0.06);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card:hover {
+  box-shadow: 0 12px 48px -8px rgba(26, 26, 46, 0.12);
+  transform: translateY(-2px);
+}
+
+/* 章节标题格式 */
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: "Noto Serif SC", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+/* 浮窗动画 */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(26, 26, 46, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(26, 26, 46, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 26, 46, 0); }
+}
+
+/* 档案卡背面纹理 */
+.card-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/%3E%3C/svg%3E");
+}
