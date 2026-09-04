@@ -45,9 +45,25 @@ export default function Home() {
           </h2>
 
           {/* 副标题 */}
-          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-10">
+          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-8">
             聚焦 Agent 与 AIGC，围绕 <em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em> 场景，持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路
           </p>
+
+          {/* 三大核心能力 */}
+          <div className="grid grid-cols-3 gap-3 md:gap-4 mb-10 max-w-3xl">
+            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
+              <div className="text-lg md:text-xl mb-1">🔍</div>
+              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">业务洞察<br />与产品判断</div>
+            </div>
+            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
+              <div className="text-lg md:text-xl mb-1">🛠️</div>
+              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">AI 原型设计<br />与快速验证</div>
+            </div>
+            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
+              <div className="text-lg md:text-xl mb-1">🤝</div>
+              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">技术理解<br />与研发协同</div>
+            </div>
+          </div>
 
           {/* 三大数据 - 拿过什么结果 */}
           <div className="grid grid-cols-3 gap-3 md:gap-5 mb-10 max-w-3xl">
@@ -101,10 +117,10 @@ export default function Home() {
               <span>查看我的作品</span>
               <span className="text-xs">→</span>
             </Link>
-            <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-ghost">
-              <span>下载简历</span>
-              <span className="text-xs">↓</span>
-            </a>
+            <Link href="#contact" className="btn-ghost">
+              <span>联系我</span>
+              <span className="text-xs">✉</span>
+            </Link>
           </div>
 
           </div>
