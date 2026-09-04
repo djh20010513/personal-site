@@ -64,37 +64,40 @@ export default function Home() {
               >
                 GMV
               </div>
-              <div className="text-xs text-ink-300 mt-1">字节 · 抖音生活服务</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">商家创意生产 Agent</div>
+              <div className="text-xs text-ink-300 mt-0.5">字节 · 抖音生活服务</div>
             </div>
             <div className="card p-4 md:p-5 text-center">
               <div
                 className="font-serif text-3xl md:text-5xl font-black text-gradient-rainbow mb-1 leading-none"
                 style={{ fontFamily: '"Times New Roman", Times, serif' }}
               >
-                +40%
+                +15%
               </div>
               <div
                 className="font-mono text-xs text-ink-500 tracking-wider uppercase"
                 style={{ fontFamily: '"Times New Roman", Times, serif' }}
               >
-                Match Effect
+                Conversion
               </div>
-              <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">个性化购物决策 Agent</div>
+              <div className="text-xs text-ink-300 mt-0.5">小红书 · 点点</div>
             </div>
             <div className="card p-4 md:p-5 text-center">
               <div
                 className="font-serif text-3xl md:text-5xl font-black text-gradient-rainbow mb-1 leading-none"
                 style={{ fontFamily: '"Times New Roman", Times, serif' }}
               >
-                +24%
+                +72%
               </div>
               <div
                 className="font-mono text-xs text-ink-500 tracking-wider uppercase"
                 style={{ fontFamily: '"Times New Roman", Times, serif' }}
               >
-                AI Cover CTR
+                New Material Volume
               </div>
-              <div className="text-xs text-ink-300 mt-1">B站 · 多模态 AIGC</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">多 Agent 广告素材优化</div>
+              <div className="text-xs text-ink-300 mt-0.5">Bilibili · 商业化</div>
             </div>
           </div>
 
