@@ -12,10 +12,10 @@ export default function Home() {
       {/* ============ Hero - 5 秒传达三件事 ============ */}
       <section className="px-6 pt-12 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
-          <div className="grid md:grid-cols-[1fr_1.1fr] gap-8 md:gap-16 items-center">
+          <div className="grid md:grid-cols-[1.6fr_1fr] gap-12 md:gap-20 items-center">
 
           {/* 左侧文字 */}
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
 
           {/* 顶部小标签 - 身份 */}
           <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
@@ -113,18 +113,18 @@ export default function Home() {
           </div>
 
           {/* 右侧卡通 IP */}
-          <div className="relative hidden md:flex justify-end items-center pr-2 lg:pr-8">
+          <div className="relative hidden md:flex justify-end items-center pr-0 lg:pr-4">
             <div className="relative animate-float-slow">
               <img
                 src="/cartoon.png"
                 alt="董静涵卡通 IP"
-                width="460"
-                height="460"
-                className="w-[340px] lg:w-[440px] h-auto drop-shadow-2xl"
+                width="360"
+                height="360"
+                className="w-[280px] lg:w-[340px] h-auto drop-shadow-2xl"
                 style={{ filter: "drop-shadow(0 16px 32px rgba(26,26,46,0.15))" }}
               />
               {/* 打招呼气泡 */}
-              <div className="absolute -top-2 -left-8 lg:-left-16 bg-white border-2 border-ink-900 rounded-2xl px-4 py-2 shadow-card-lg max-w-[180px] -rotate-6">
+              <div className="absolute -top-2 -left-8 lg:-left-12 bg-white border-2 border-ink-900 rounded-2xl px-4 py-2 shadow-card-lg max-w-[180px] -rotate-6">
                 <p className="text-sm font-medium text-ink-900 whitespace-nowrap">
                   Hi, 我是静涵 👋
                 </p>
