@@ -74,11 +74,8 @@ export default function Home() {
               >
                 +15%
               </div>
-              <div
-                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
-              >
-                Conversion
+              <div className="font-mono text-xs text-ink-500 tracking-wider mt-1">
+                种草转化率
               </div>
               <div className="text-xs text-ink-700 font-medium mt-1">个性化购物决策 Agent</div>
               <div className="text-xs text-ink-300 mt-0.5">小红书 · 点点</div>
@@ -90,11 +87,8 @@ export default function Home() {
               >
                 +72%
               </div>
-              <div
-                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
-              >
-                New Material Volume
+              <div className="font-mono text-xs text-ink-500 tracking-wider mt-1">
+                新素材保底跑量
               </div>
               <div className="text-xs text-ink-700 font-medium mt-1">多 Agent 广告素材优化</div>
               <div className="text-xs text-ink-300 mt-0.5">Bilibili · 商业化</div>
