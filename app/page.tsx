@@ -12,16 +12,16 @@ export default function Home() {
       {/* ============ Hero - 5 秒传达三件事 ============ */}
       <section className="px-6 pt-12 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
-          <div className="grid md:grid-cols-[1.4fr_1fr] gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-[1fr_1.1fr] gap-8 md:gap-16 items-center">
 
           {/* 左侧文字 */}
-          <div>
+          <div className="max-w-xl">
 
           {/* 顶部小标签 - 身份 */}
           <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
             <span className="font-mono text-xs tracking-wider text-ink-700">
-              2026 校招 · 寻找 AI 产品经理机会
+              2027届校招 · 寻找AI产品经理机会
             </span>
           </div>
 
@@ -31,8 +31,11 @@ export default function Home() {
           </h1>
 
           <div className="mb-7">
-            <span className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight">
-              {profile.title} · Agent / AIGC
+            <span
+              className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight"
+              style={{ fontFamily: '"Times New Roman", Times, serif' }}
+            >
+              AI Product Manager / AI产品经理
             </span>
           </div>
 
@@ -47,30 +50,48 @@ export default function Home() {
           </p>
 
           {/* 三大数据 - 拿过什么结果 */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-10 max-w-3xl">
-            <div className="card p-6 text-center">
-              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+          <div className="grid grid-cols-3 gap-3 md:gap-5 mb-10 max-w-3xl">
+            <div className="card p-4 md:p-5 text-center">
+              <div
+                className="font-serif text-3xl md:text-5xl font-black text-gradient-rainbow mb-1 leading-none"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 +12%
               </div>
-              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+              <div
+                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 GMV
               </div>
               <div className="text-xs text-ink-300 mt-1">字节 · 抖音生活服务</div>
             </div>
-            <div className="card p-6 text-center">
-              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+            <div className="card p-4 md:p-5 text-center">
+              <div
+                className="font-serif text-3xl md:text-5xl font-black text-gradient-rainbow mb-1 leading-none"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 +40%
               </div>
-              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+              <div
+                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 Match Effect
               </div>
               <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
             </div>
-            <div className="card p-6 text-center">
-              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+            <div className="card p-4 md:p-5 text-center">
+              <div
+                className="font-serif text-3xl md:text-5xl font-black text-gradient-rainbow mb-1 leading-none"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 +24%
               </div>
-              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+              <div
+                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
+                style={{ fontFamily: '"Times New Roman", Times, serif' }}
+              >
                 AI Cover CTR
               </div>
               <div className="text-xs text-ink-300 mt-1">B站 · 多模态 AIGC</div>
@@ -80,11 +101,11 @@ export default function Home() {
           {/* 两个 CTA */}
           <div className="flex flex-wrap gap-4">
             <Link href="#projects" className="btn-primary">
-              <span>View My Work</span>
+              <span>查看我的作品</span>
               <span className="text-xs">→</span>
             </Link>
             <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-ghost">
-              <span>Download Resume</span>
+              <span>下载简历</span>
               <span className="text-xs">↓</span>
             </a>
           </div>
@@ -92,14 +113,14 @@ export default function Home() {
           </div>
 
           {/* 右侧卡通 IP */}
-          <div className="relative hidden md:flex justify-center items-center">
+          <div className="relative hidden md:flex justify-end items-center pr-2 lg:pr-8">
             <div className="relative animate-float-slow">
               <img
                 src="/cartoon.png"
                 alt="董静涵卡通 IP"
-                width="420"
-                height="420"
-                className="w-[320px] lg:w-[420px] h-auto drop-shadow-2xl"
+                width="460"
+                height="460"
+                className="w-[340px] lg:w-[440px] h-auto drop-shadow-2xl"
                 style={{ filter: "drop-shadow(0 16px 32px rgba(26,26,46,0.15))" }}
               />
               {/* 打招呼气泡 */}
