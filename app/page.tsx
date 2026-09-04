@@ -3,7 +3,6 @@ import { profile, archiveCards, education, experiences, projects, skills, hobbie
 import ArchiveCardDeck from "@/components/ArchiveCardDeck";
 import FloatingDecorations from "@/components/FloatingDecorations";
 import ScrollHint from "@/components/ScrollHint";
-import CartoonAvatar from "@/components/CartoonAvatar";
 
 export default function Home() {
   return (
@@ -13,89 +12,79 @@ export default function Home() {
       {/* ============ Hero - 5 秒传达三件事 ============ */}
       <section className="px-6 pt-12 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
-          <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 md:gap-12 items-center">
 
-            {/* 左侧文字 */}
-            <div>
-              {/* 顶部小标签 - 身份 */}
-              <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
-                <span className="font-mono text-xs tracking-wider text-ink-700">
-                  2026 校招 · 寻找 AI 产品经理机会
-                </span>
-              </div>
-
-              {/* 姓名 + 职位 */}
-              <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-3">
-                <span className="text-ink-900">{profile.name}</span>
-              </h1>
-
-              <div className="mb-7">
-                <span className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight">
-                  {profile.title} · Agent / AIGC
-                </span>
-              </div>
-
-              {/* 主标题 - 1 句话讲清做什么 */}
-              <h2 className="font-serif text-xl md:text-2xl font-bold tracking-tightish leading-[1.4] text-ink-900 mb-4 max-w-3xl">
-                把模型能力，变成真正 <em className="not-italic text-gradient-rainbow">可用、可衡量</em> 的 AI 产品
-              </h2>
-
-              {/* 副标题 */}
-              <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-2xl mb-10">
-                聚焦 Agent 与 AIGC，围绕 <em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em> 场景，持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路
-              </p>
-
-              {/* 三大数据 - 拿过什么结果 */}
-              <div className="grid grid-cols-3 gap-4 md:gap-6 mb-10">
-                <div className="card p-4 md:p-6 text-center">
-                  <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
-                    +12%
-                  </div>
-                  <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
-                    GMV
-                  </div>
-                  <div className="text-xs text-ink-300 mt-1">字节 · 抖音生活服务</div>
-                </div>
-                <div className="card p-4 md:p-6 text-center">
-                  <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
-                    +40%
-                  </div>
-                  <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
-                    Match Effect
-                  </div>
-                  <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
-                </div>
-                <div className="card p-4 md:p-6 text-center">
-                  <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
-                    +24%
-                  </div>
-                  <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
-                    AI Cover CTR
-                  </div>
-                  <div className="text-xs text-ink-300 mt-1">B站 · 多模态 AIGC</div>
-                </div>
-              </div>
-
-              {/* 两个 CTA */}
-              <div className="flex flex-wrap gap-4">
-                <Link href="#projects" className="btn-primary">
-                  <span>View My Work</span>
-                  <span className="text-xs">→</span>
-                </Link>
-                <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-ghost">
-                  <span>Download Resume</span>
-                  <span className="text-xs">↓</span>
-                </a>
-              </div>
-            </div>
-
-            {/* 右侧 IP 形象 */}
-            <div className="relative h-[360px] md:h-[460px] hidden md:block">
-              <CartoonAvatar />
-            </div>
-
+          {/* 顶部小标签 - 身份 */}
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
+            <span className="font-mono text-xs tracking-wider text-ink-700">
+              2026 校招 · 寻找 AI 产品经理机会
+            </span>
           </div>
+
+          {/* 姓名 + 职位 */}
+          <h1 className="font-serif text-6xl md:text-8xl font-black tracking-tightish leading-[0.95] mb-3">
+            <span className="text-ink-900">{profile.name}</span>
+          </h1>
+
+          <div className="mb-7">
+            <span className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight">
+              {profile.title} · Agent / AIGC
+            </span>
+          </div>
+
+          {/* 主标题 - 1 句话讲清做什么 */}
+          <h2 className="font-serif text-xl md:text-2xl font-bold tracking-tightish leading-[1.4] text-ink-900 mb-4 max-w-4xl">
+            把模型能力，变成真正 <em className="not-italic text-gradient-rainbow">可用、可衡量</em> 的 AI 产品
+          </h2>
+
+          {/* 副标题 */}
+          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-10">
+            聚焦 Agent 与 AIGC，围绕 <em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em> 场景，持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路
+          </p>
+
+          {/* 三大数据 - 拿过什么结果 */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 mb-10 max-w-3xl">
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +12%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                GMV
+              </div>
+              <div className="text-xs text-ink-300 mt-1">字节 · 抖音生活服务</div>
+            </div>
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +40%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                Match Effect
+              </div>
+              <div className="text-xs text-ink-300 mt-1">小红书 · 个性化推荐</div>
+            </div>
+            <div className="card p-6 text-center">
+              <div className="font-serif text-4xl md:text-6xl font-black text-gradient-rainbow mb-2 leading-none">
+                +24%
+              </div>
+              <div className="font-mono text-xs md:text-sm text-ink-500 tracking-wider uppercase">
+                AI Cover CTR
+              </div>
+              <div className="text-xs text-ink-300 mt-1">B站 · 多模态 AIGC</div>
+            </div>
+          </div>
+
+          {/* 两个 CTA */}
+          <div className="flex flex-wrap gap-4">
+            <Link href="#projects" className="btn-primary">
+              <span>View My Work</span>
+              <span className="text-xs">→</span>
+            </Link>
+            <a href="/resume.pdf" target="_blank" rel="noopener" className="btn-ghost">
+              <span>Download Resume</span>
+              <span className="text-xs">↓</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
