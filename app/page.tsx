@@ -49,20 +49,13 @@ export default function Home() {
             聚焦 Agent 产品方向，擅长从业务问题出发设计 AI 产品方案，并通过<em className="not-italic text-ink-900 font-semibold">原型验证、技术协同与数据迭代</em>推动产品 0→1 落地。
           </p>
 
-          {/* 三大核心能力 */}
-          <div className="grid grid-cols-3 gap-3 md:gap-4 mb-10 max-w-3xl">
-            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
-              <div className="text-lg md:text-xl mb-1">🔍</div>
-              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">业务洞察<br />与产品判断</div>
-            </div>
-            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
-              <div className="text-lg md:text-xl mb-1">🛠️</div>
-              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">AI 原型设计<br />与快速验证</div>
-            </div>
-            <div className="bg-white/60 backdrop-blur-md border border-white/80 rounded-xl p-3 md:p-4">
-              <div className="text-lg md:text-xl mb-1">🤝</div>
-              <div className="text-xs md:text-sm font-bold text-ink-900 leading-tight">技术理解<br />与研发协同</div>
-            </div>
+          {/* 三大核心能力 - 文字一行 */}
+          <div className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-8 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span><span className="mr-1">🔍</span>业务洞察能力</span>
+            <span className="text-ink-300">|</span>
+            <span><span className="mr-1">🛠️</span>AI 原型验证能力</span>
+            <span className="text-ink-300">|</span>
+            <span><span className="mr-1">🤝</span>技术理解能力</span>
           </div>
 
           {/* 三大数据 - 拿过什么结果 */}
