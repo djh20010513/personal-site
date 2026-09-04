@@ -30,27 +30,27 @@ export default function Home() {
             <span className="text-ink-900">{profile.name}</span>
           </h1>
 
-          <div className="mb-7">
+          <div className="mb-5">
             <span
               className="text-xl md:text-2xl font-bold text-gradient-rainbow font-mono tracking-tight"
               style={{ fontFamily: '"Times New Roman", Times, serif' }}
             >
-              AI Product Manager / AI产品经理
+              AI 产品经理 · Agent
             </span>
           </div>
 
           {/* 主标题 - 1 句话讲清做什么 */}
-          <h2 className="font-serif text-xl md:text-2xl font-bold tracking-tightish leading-[1.4] text-ink-900 mb-4 max-w-4xl">
+          <h2 className="font-serif text-xl md:text-2xl font-bold tracking-tightish leading-[1.4] text-ink-900 mb-3 max-w-4xl">
             把模型能力，变成真正 <em className="not-italic text-gradient-rainbow">可用、可衡量</em> 的 AI 产品
           </h2>
 
           {/* 副标题 */}
-          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-8">
-            聚焦 Agent 产品方向，擅长从业务问题出发设计 AI 产品方案，并通过<em className="not-italic text-ink-900 font-semibold">原型验证、技术协同与数据迭代</em>推动产品 0→1 落地。
+          <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-6">
+            聚焦 Agent 产品，擅长从业务问题出发，完成<em className="not-italic text-ink-900 font-semibold">需求拆解、产品设计、快速验证</em>与 0→1 落地。
           </p>
 
           {/* 三大核心能力 - 文字一行 */}
-          <div className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-8 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <div className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-10 flex flex-wrap items-center gap-x-3 gap-y-1">
             <span><span className="mr-1">🔍</span>业务洞察能力</span>
             <span className="text-ink-300">|</span>
             <span><span className="mr-1">🛠️</span>AI 原型验证能力</span>
@@ -67,14 +67,10 @@ export default function Home() {
               >
                 +12%
               </div>
-              <div
-                className="font-mono text-xs text-ink-500 tracking-wider uppercase"
-                style={{ fontFamily: '"Times New Roman", Times, serif' }}
-              >
-                GMV
+              <div className="font-mono text-xs text-ink-500 tracking-wider mt-1">
+                GMV 提升
               </div>
-              <div className="text-xs text-ink-700 font-medium mt-1">商家创意生产 Agent</div>
-              <div className="text-xs text-ink-300 mt-0.5">字节 · 抖音生活服务</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">字节 · 商家创意 Agent</div>
             </div>
             <div className="card p-4 md:p-5 text-center">
               <div
@@ -84,10 +80,9 @@ export default function Home() {
                 +15%
               </div>
               <div className="font-mono text-xs text-ink-500 tracking-wider mt-1">
-                种草转化率
+                种草转化提升
               </div>
-              <div className="text-xs text-ink-700 font-medium mt-1">个性化购物决策 Agent</div>
-              <div className="text-xs text-ink-300 mt-0.5">小红书 · 点点</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">小红书 · 购物决策 Agent</div>
             </div>
             <div className="card p-4 md:p-5 text-center">
               <div
@@ -97,10 +92,9 @@ export default function Home() {
                 +72%
               </div>
               <div className="font-mono text-xs text-ink-500 tracking-wider mt-1">
-                新素材保底跑量
+                新素材跑量提升
               </div>
-              <div className="text-xs text-ink-700 font-medium mt-1">多 Agent 广告素材优化</div>
-              <div className="text-xs text-ink-300 mt-0.5">Bilibili · 商业化</div>
+              <div className="text-xs text-ink-700 font-medium mt-1">哔哩哔哩 · 多 Agent 素材生成</div>
             </div>
           </div>
 
