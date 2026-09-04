@@ -12,6 +12,10 @@ export default function Home() {
       {/* ============ Hero - 5 秒传达三件事 ============ */}
       <section className="px-6 pt-12 pb-20 relative">
         <div className="max-w-6xl mx-auto w-full relative">
+          <div className="grid md:grid-cols-[1.4fr_1fr] gap-8 md:gap-12 items-center">
+
+          {/* 左侧文字 */}
+          <div>
 
           {/* 顶部小标签 - 身份 */}
           <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
@@ -85,6 +89,33 @@ export default function Home() {
             </a>
           </div>
 
+          </div>
+
+          {/* 右侧卡通 IP */}
+          <div className="relative hidden md:flex justify-center items-center">
+            <div className="relative animate-float-slow">
+              <img
+                src="/cartoon.png"
+                alt="董静涵卡通 IP"
+                width="420"
+                height="420"
+                className="w-[320px] lg:w-[420px] h-auto drop-shadow-2xl"
+                style={{ filter: "drop-shadow(0 16px 32px rgba(26,26,46,0.15))" }}
+              />
+              {/* 打招呼气泡 */}
+              <div className="absolute -top-2 -left-8 lg:-left-16 bg-white border-2 border-ink-900 rounded-2xl px-4 py-2 shadow-card-lg max-w-[180px] -rotate-6">
+                <p className="text-sm font-medium text-ink-900 whitespace-nowrap">
+                  Hi, 我是静涵 👋
+                </p>
+                <div className="absolute -bottom-2 right-6 w-3 h-3 bg-white border-r-2 border-b-2 border-ink-900 rotate-45" />
+              </div>
+              {/* 装饰小爱心 */}
+              <div className="absolute top-8 -right-2 text-2xl animate-float-fast">💙</div>
+              <div className="absolute bottom-12 -left-4 text-xl animate-float-slow">✨</div>
+            </div>
+          </div>
+
+          </div>
         </div>
       </section>
 
