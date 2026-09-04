@@ -4,25 +4,40 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { profile } from "@/lib/data";
 
+const links = [
+  { href: "#about",     label: "关于我",   id: "about" },
+  { href: "#education", label: "教育背景", id: "education" },
+  { href: "#work",      label: "工作经历", id: "work" },
+  { href: "#projects",  label: "个人作品", id: "projects" },
+  { href: "#skills",    label: "技能与爱好", id: "skills" },
+  { href: "#contact",   label: "联系我",   id: "contact" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState<string>("");
 
+  // 滚动监听: 改变背景 + 当前 section 高亮
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      // 找到当前可见的 section
+      const scrollY = window.scrollY + 150; // 提前 150px 触发
+      let currentId = "";
+      for (const link of links) {
+        const el = document.getElementById(link.id);
+        if (el && el.offsetTop <= scrollY) {
+          currentId = link.id;
+        }
+      }
+      setActive(currentId);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const links = [
-    { href: "#about",     label: "关于我" },
-    { href: "#education", label: "教育背景" },
-    { href: "#work",      label: "工作经历" },
-    { href: "#projects",  label: "个人作品" },
-    { href: "#skills",    label: "技能与爱好" },
-    { href: "#contact",   label: "联系我" },
-  ];
 
   return (
     <header
@@ -36,27 +51,31 @@ export default function Navbar() {
           ? "bg-white/70 backdrop-blur-xl border border-white/80 shadow-card"
           : "bg-white/40 backdrop-blur-md border border-white/40"
       }`}>
-        {/* Logo */}
+        {/* Logo - 仅圆形头像,无 PORTFOLIO 字 */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <div className="w-9 h-9 rounded-full bg-ink-900 text-white grid place-items-center font-serif text-sm font-bold">
             {profile.name.charAt(0)}
           </div>
-          <span className="font-mono text-xs tracking-[0.2em] text-ink-700 hidden sm:inline">
-            PORTFOLIO
-          </span>
         </Link>
 
         {/* 桌面端 */}
         <div className="hidden md:flex items-center gap-1 text-sm">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="px-3 py-2 text-ink-700 hover:text-ink-900 transition rounded-full hover:bg-white/60"
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) => {
+            const isActive = active === l.id;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`px-3 py-2 transition rounded-full ${
+                  isActive
+                    ? "text-white bg-ink-900 font-medium"
+                    : "text-ink-700 hover:text-ink-900 hover:bg-white/60"
+                }`}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* 简历按钮 */}
@@ -74,6 +93,7 @@ export default function Navbar() {
         <button
           className="md:hidden w-9 h-9 grid place-items-center"
           onClick={() => setOpen(!open)}
+          aria-label="菜单"
         >
           <div className="w-5 flex flex-col gap-1.5">
             <span className={`block h-0.5 bg-ink-900 transition ${open ? "rotate-45 translate-y-2" : ""}`} />
@@ -86,16 +106,23 @@ export default function Navbar() {
       {/* 移动端菜单 */}
       {open && (
         <div className="md:hidden mt-2 bg-white/90 backdrop-blur-xl border border-white/80 rounded-3xl shadow-card p-4 flex flex-col gap-1">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="px-4 py-2 text-ink-700 hover:bg-rainbow-pink/30 rounded-2xl"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) => {
+            const isActive = active === l.id;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`px-4 py-2 rounded-2xl ${
+                  isActive
+                    ? "bg-ink-900 text-white font-medium"
+                    : "text-ink-700 hover:bg-rainbow-pink/30"
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            );
+          })}
         </div>
       )}
     </header>

@@ -18,7 +18,7 @@ export default function Home() {
           <div className="max-w-2xl">
 
           {/* 顶部小标签 - 身份 */}
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-white/60 backdrop-blur-md border border-white/80 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-accent-warm animate-pulse" />
             <span className="font-mono text-xs tracking-wider text-ink-700">
               2027届校招 · 寻找AI产品经理机会
@@ -46,7 +46,7 @@ export default function Home() {
 
           {/* 副标题 */}
           <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-6">
-            聚焦 Agent 产品，擅长从业务问题出发，完成<em className="not-italic text-ink-900 font-semibold">需求拆解、产品设计、快速验证</em>与 0→1 落地。
+            聚焦 Agent 产品，擅长从业务问题出发，完成<em className="not-italic text-ink-900 font-semibold">需求拆解、产品设计、快速验证</em>与上线落地。
           </p>
 
           {/* 三大核心能力 - 文字一行 */}
