@@ -46,7 +46,7 @@ export default function Home() {
 
           {/* 副标题 */}
           <p className="text-sm md:text-base text-ink-700 leading-relaxed max-w-3xl mb-8">
-            聚焦 Agent 与 AIGC，围绕 <em className="not-italic text-ink-900 font-semibold">内容生成、个性化决策、商家经营</em> 场景，持续探索从业务问题、AI 能力设计到产品落地与数据迭代的完整链路
+            聚焦 Agent 产品方向，擅长从业务问题出发设计 AI 产品方案，并通过<em className="not-italic text-ink-900 font-semibold">原型验证、技术协同与数据迭代</em>推动产品 0→1 落地。
           </p>
 
           {/* 三大核心能力 */}
