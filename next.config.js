@@ -1,9 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // 图片优化(项目里如果要用 next/image 的话)
   images: {
     unoptimized: true,
+  },
+  // www.dongjinghan.cn → dongjinghan.cn 重定向
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.dongjinghan.cn" }],
+        destination: "https://dongjinghan.cn/:path*",
+        permanent: true,
+      },
+    ];
   },
 };
 

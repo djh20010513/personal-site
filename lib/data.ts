@@ -229,7 +229,7 @@ export const projects = [
     ],
     cover: "/projects/job-hunter.jpg",
     color: "pink",
-    link: "https://peisonal-site.vercel.app",
+    link: "https://dongjinghan.cn",
   },
   {
     id: "ai-demos",
@@ -280,7 +280,7 @@ export const projects = [
     ],
     cover: "/projects/site.jpg",
     color: "yellow",
-    link: "https://peisonal-site.vercel.app",
+    link: "https://dongjinghan.cn",
   },
 ];
 
